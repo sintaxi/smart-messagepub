@@ -33,10 +33,15 @@ get notification with id = 1
     
 create a new notification
 
-    notification = new MessagePub.Notification({ body: this.request.body.body, 
-      recipients: [{position: 1, channel: this.request.body.channel, address: this.request.body.address }] });
+    notification = new MessagePub.Notification({ body: "hey man, loving the eternal", 
+                    recipients: [
+                      {position: 1, channel: "email", address: "thurson@sonicyouth.com" }
+                      {position: 1, channel: "phone", address: "5555555" }
+                    ]});
     
     messagepub.send(notification);
+    
+see [messagepub API reference](http://messagepub.com/documentation/api) for more details.
         
 ### coming soon
 
